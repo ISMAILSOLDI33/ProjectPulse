@@ -1,0 +1,70 @@
+/* src/components/AddProjectForm.css */
+.form-container {
+  padding: 10px;
+  background-color: #F3F4F6;
+  border-radius: 8px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container input,
+.form-container select {
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #D1D5DB;
+  border-radius: 4px;
+  font-size: 1em;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #FFFFFF;
+}
+
+.form-container .task-input-group {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.form-container input[type="datetime-local"] {
+  padding: 8px;
+}
+
+.form-container button {
+  padding: 8px 16px;
+  margin: 8px 0;
+  background-color: #1E3A8A;
+  color: #F3F4F6;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.form-container button:hover {
+  background-color: #1E40AF;
+  transform: scale(1.05);
+}
+
+.form-container button[type="button"] {
+  background-color: #6C757D;
+}
+
+.form-container button[type="button"]:hover {
+  background-color: #5A6268;
+}
+
+.form-container button:disabled {
+  background-color: #A1A1AA;
+  cursor: not-allowed;
+}
+
+.form-container p {
+  color: #EF4444;
+  text-align: center;
+  margin: 8px 0;
+  font-size: 0.9em;
+}

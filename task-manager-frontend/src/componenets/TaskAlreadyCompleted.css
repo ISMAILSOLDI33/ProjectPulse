@@ -1,0 +1,56 @@
+.completed-task-container {
+  max-width: 800px; /* Slightly narrower than TaskTable for distinction */
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #e0f7fa; /* Light teal background */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.completed-task-container h2{
+    text-align: center;
+    color: #00695c;
+    margin-bottom: 20px;
+}
+.completed-task-container table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff; 
+}
+
+.completed-task-container thead {
+  background-color: #26a69a; 
+  color: white;
+}
+
+.completed-task-container th {
+  padding: 12px;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid #80cbc4; 
+}
+
+.completed-task-container td {
+  padding: 10px;
+  border-bottom: 1px solid #b2dfdb; 
+  vertical-align: middle;
+  transition: background-color 0.3s ease;
+}
+
+.completed-task-container tr:hover td {
+  background-color: #e0f2f1; 
+}
+
+.completed-task-container td:first-child {
+  font-weight: 500;
+  color: #00695c; 
+}
+
+.completed-task-container td:nth-child(2) {
+  color: #004d40; 
+}
+
+.completed-task-container td:nth-child(3) {
+  color: #455a64;
+}

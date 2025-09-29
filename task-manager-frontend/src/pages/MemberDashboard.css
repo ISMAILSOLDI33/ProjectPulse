@@ -1,0 +1,164 @@
+/* src/components/MemberDashboard.css */
+.member-dashboard-container {
+  max-width: 1000px; /* Matches ProjectTable width for consistency */
+  margin: 20px auto;
+  padding: 25px;
+  background-color: #f9f9f9; /* Light gray background */
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  min-height: 85vh; /* Ensures the dashboard fills most of the viewport */
+  position: relative;
+  overflow: hidden; /* Contains potential overflow from animations */
+}
+
+.member-dashboard-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #ffe0b2 0%, #fff3e0 100%); /* Soft orange gradient */
+  z-index: -1;
+  opacity: 0.2; /* Subtle background effect */
+  animation: gradientShift 10s ease infinite; /* Gentle animation */
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.member-dashboard-container h1 {
+  text-align: center;
+  color: #181818;
+  margin-bottom: 25px;
+  font-size: 2.2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: fadeIn 1s ease-in; /* Fade-in animation for header */
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.member-dashboard-container .task-table-container {
+  margin-top: 25px;
+  border: 2px solid #ff9800;
+  border-radius: 10px;
+  overflow: hidden; 
+  animation: slideUp 0.8s ease-out; 
+}
+
+.member-dashboard-container .completed-task-container{
+  margin-top: 25px;
+  border: 2px solid #4ef879;
+  border-radius: 10px;
+  overflow: hidden; 
+  animation: slideUp 0.8s ease-out; 
+}
+@keyframes slideUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.member-dashboard-container .task-table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+.member-dashboard-container .task-table-container th {
+  background-color: #ff9800;
+  color: white;
+  padding: 12px;
+  text-align: left;
+  border-bottom: 3px solid #ffb74d;
+  font-size: 1.15em;
+  font-weight: 600;
+}
+
+.member-dashboard-container .task-table-container td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+  background-color: white;
+  transition: background-color 0.3s ease;
+}
+
+.member-dashboard-container .task-table-container tr:hover td {
+  background-color: #fff8e1;
+}
+
+.member-dashboard-container .task-table-container .task-item {
+  margin: 15px 0;
+  padding: 8px;
+  background-color: #ffe0b2;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9em;
+  line-height: 1.2;
+  border-bottom: 1px dashed #ffcc80;
+}
+
+.member-dashboard-container .task-table-container .task-actions {
+  display: flex;
+  gap: 10px; /* Slightly larger gap for buttons */
+}
+
+.member-dashboard-container .task-table-container .done-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.member-dashboard-container .task-table-container .done-button:hover {
+  background-color: #45a049;
+  transform: scale(1.05); /* Slight scale-up on hover */
+}
+
+.member-dashboard-container .task-table-container .description-button {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.member-dashboard-container .task-table-container .description-button:hover {
+  background-color: #1976d2;
+  transform: scale(1.05); /* Slight scale-up on hover */
+}
+
+.member-dashboard-container .task-table-container .message {
+  text-align: center;
+  color: #d32f2f;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.member-dashboard-container .shining-username {
+  color: #63625f; /* Bright yellow as base color */
+  transition: text-shadow 0.8s ease, color 0.8s ease; /* Smooth transition for hover */
+}
+
+.member-dashboard-container .shining-username:hover {
+  color: white; /* Gold on hover for a warm effect */
+    text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #ffd700,
+    0 0 15px #ffd700,
+    0 0 20px #f90; /* Subtle glow on hover */
+}

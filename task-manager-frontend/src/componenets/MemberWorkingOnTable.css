@@ -1,0 +1,161 @@
+/* src/components/MemberWorkingOnTable.css */
+.member-working-on-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 2px solid #6a1b9a;
+  background-color: #f0e7f5;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.table-header h1 {
+  color: #333;
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.toggle-table-btn {
+  background: none;
+  border: none;
+  color: #6a1b9a;
+  cursor: pointer;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.toggle-table-btn:hover {
+  color: #9c4dcc;
+  transform: scale(1.1);
+}
+
+.table-content.hidden {
+  display: none;
+}
+
+.member-working-on-container table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+.member-working-on-container th {
+  background-color: #6a1b9a;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  border-bottom: 2px solid #9c4dcc;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.member-working-on-container td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+  background-color: white;
+  transition: background-color 0.3s ease;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.member-working-on-container tr:hover td {
+  background-color: #d5bfe6;
+}
+
+.member-working-on-container td:first-child {
+  font-weight: 500;
+  color: #1d1b1f;
+  font-size: 0.95em;
+}
+
+.member-working-on-container .task-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0;
+  padding: 6px;
+  background-color: #e1bee7;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.member-working-on-container .task-row:hover {
+  background-color: #bf8bc9;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 0.25rem;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.delete-btn:hover {
+  color: #e74c3c;
+  transform: scale(1.1);
+}
+
+.member-working-on-container p {
+  color: #dc3545;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+@media (max-width: 640px) {
+  .member-working-on-container {
+    padding: 15px;
+    width: 95%;
+  }
+
+  .member-working-on-container h1 {
+    font-size: 1.25em;
+  }
+
+  .member-working-on-container th,
+  .member-working-on-container td {
+    padding: 8px;
+    font-size: 0.9em;
+  }
+
+  .member-working-on-container .task-row {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 0.85em;
+  }
+
+  .delete-btn {
+    margin-left: 0;
+    padding: 0.2rem;
+  }
+
+  .toggle-table-btn {
+    font-size: 30px; /* Slightly smaller on mobile */
+  }
+}
+
+@keyframes pulse {
+  0% { background-color: #f0e7f5; }
+  50% { background-color: #d5bfe6; }
+  100% { background-color: #f0e7f5; }
+}
+
+.table-content {
+  transition: opacity 0.6s ease, max-height 0.4s ease;
+  max-height: 1000px; /* Adjust based on content */
+  overflow: hidden;
+}
+.table-content.hidden {
+  display: block;
+  opacity: 0;
+  max-height: 0;
+}
